@@ -5,13 +5,20 @@
     <title>Data Submition Page</title>
   </head>
   <body>
-    <form action="index.html" method="post">
-      <input type="file" name="dataSet" value="">
+    <form action="jScriptAnalysisPage.html" method="POST" enctype="multipart/form-data">
+      <input type="file" id="data"/>
+      <input type="submit" name="submit" value="Submit">
     </form>
   </body>
   <footer>
-    <script type="text/javascript">
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            console.log("Working...");
+        });
     </script>
   </footer>
 </html>
