@@ -15,7 +15,19 @@
 			<?php
 				$finfo = new finfo(FILEINFO_MIME_TYPE);
 				$fileDat = file_get_contents($_FILES['data']['tmp_name']);
-				echo $fileDat;
+				$launchData = array();
+				$name = "";
+				for($count = 0; isset($fileDat[$count]) && $fileDat[$count + 1] != "\n"; $count++){
+					if($fileDat[$count] == ","){
+						$launchData[$name] = array();
+						$name = "";
+					}
+					$name = ($fileDat[$count] == ",")? "":$name . $fileDat[$count];
+				}
+				$launchData[$name] = array();
+				echo "<pre>";
+				var_dump($launchData);
+				echo "</pre>";
 			?>
 		</div>
 	<?php endif; ?>
