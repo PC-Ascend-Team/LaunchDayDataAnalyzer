@@ -1,3 +1,4 @@
+<?php $secDiv = "<br>=================================<br>"; ?>
 <html>
 <head>
 	<title>Submit page</title>
@@ -12,10 +13,9 @@
 	<?php else: ?>
 		<div>
 			<?php
-				echo "<pre>";
-				var_dump($_POST);
-				var_dump($_FILES);
-				echo "</pre>";
+				$finfo = new finfo(FILEINFO_MIME_TYPE);
+				$fileDat = file_get_contents($_FILES['data']['tmp_name']);
+				echo $fileDat;
 			?>
 		</div>
 	<?php endif; ?>
