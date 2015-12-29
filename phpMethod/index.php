@@ -1,8 +1,8 @@
 <?php $secDiv = "<br>=================================<br>"; ?>
 <html>
-<head>
-	<title>Submit page</title>
-</head>
+	<head>
+		<title>Submit page</title>
+	</head>
 <body>
 	<?php if(empty($_POST)):?>
 		<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
